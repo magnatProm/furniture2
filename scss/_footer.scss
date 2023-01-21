@@ -1,0 +1,35 @@
+.footer {
+    @include accent;
+    line-height: 234%;
+    margin-top: var(--wpapper_padding);
+
+    &__wrapper {
+        padding-top: 33px;
+        flex-wrap: wrap;
+    }
+
+    &__headline {
+        border-bottom-color: rgb(255, 255, 255);
+    }
+
+    &__title {
+        font-size: 32px;
+    }
+
+    &__aside {
+        padding-top: 10px;
+    }
+
+    &__item:nth-child(1) {
+        flex-grow: 3;
+    }
+
+    &__item {
+        flex: 1 1 154px;
+    }
+
+    &__wrapper>*:not(:last-child) {
+        margin-right: 74px;
+        margin-bottom: 17px;
+    }
+}

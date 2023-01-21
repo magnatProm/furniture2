@@ -1,0 +1,45 @@
+.nav {
+    align-items: center;
+    padding-top: 16px;
+
+    &__logo {
+        height: clamp(1.875rem, 1.682rem + 0.97vw, 2.5rem);
+    }
+
+    &__list {
+        text-transform: initial;
+        position: relative;
+    }
+
+    &__list *:hover &__dropdown {
+        display: block;
+    }
+
+    &__list *:not(:last-child) {
+        margin-right: 32px;
+    }
+
+    &__dropdown {
+        position: absolute;
+        @include border(8px 16px, 1px solid #000000, #fff);
+        display: none;
+    }
+
+    &__dropdown>*:not(:nth-child(1)) {
+        margin-top: 9px;
+    }
+
+    &__link:hover {
+        text-decoration: revert;
+        text-underline-offset: 1px;
+        text-decoration-skip-ink: none;
+        text-decoration-thickness: 3px;
+    }
+
+    @media (max-width:430px) {
+        & {
+            flex-wrap: wrap;
+            gap: 22px;
+        }
+    }
+}

@@ -1,0 +1,63 @@
+.slider {
+    position: relative;
+
+    &__carousel {
+        display: flex;
+        width: max-content;
+        transition: 1s all;
+        user-select: none;
+        transform: translateX(100vw);
+    }
+
+    .active &__carousel {
+        transform: translateX(0vw);
+    }
+
+    &__window {
+        overflow: hidden;
+        width: 100%;
+        cursor: grab;
+    }
+
+    &__window:active {
+        cursor: grabbing;
+    }
+
+    &__control {
+        display: flex;
+        position: absolute;
+        bottom: -20px;
+        width: 100%;
+    }
+
+    &__img {
+        margin: auto;
+        height: 35vh;
+    }
+
+    &__control *+* {
+        margin-left: auto;
+    }
+
+    &__btn-left {
+        transform: scale(-1, 1);
+    }
+
+    [class*="slider__btn"] {
+        @include border(6px 24px, 1px solid #000000, #fff);
+        transition: .4s all;
+    }
+
+    [class*="slider__btn"]:hover {
+        @include accent;
+    }
+
+    [class*="slider__btn"]:active {
+        background: #fff;
+        color: #000000;
+    }
+
+    &__none {
+        opacity: 0;
+    }
+}

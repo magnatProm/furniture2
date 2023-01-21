@@ -1,0 +1,83 @@
+.promo {
+    padding-top: 114px;
+    line-height: 106%;
+    font-size: clamp(3.125rem, 1.658rem + 7.34vw, 7.875rem);
+    text-transform: uppercase;
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    &__btn {
+        font-size: 32px;
+        padding: 28px 22px;
+        line-height: initial;
+        margin: initial;
+    }
+
+    &__box {
+        transition: 1.5s all;
+        @include height_width(99px, 0px);
+        flex: 0 1 0px;
+        overflow: hidden;
+    }
+
+    .active &__box {
+        flex: 1 1 90px;
+    }
+
+    &__img {
+        @include height_width(0px, 100%);
+        object-fit: cover;
+    }
+
+    &__img_active {
+        height: 99px;
+    }
+
+    &__img[data-position] {
+        object-position: bottom;
+        animation: shadow 8s linear 0s infinite alternate-reverse none;
+    }
+
+    &__img[data-position_center] {
+        transform: scale3d(1.5, 1.5, 1);
+        animation: shadow1 4s linear 0s infinite alternate-reverse none;
+    }
+
+    &__img[data-position_left] {
+        transform: scale3d(2, 2, 1);
+        animation: shadow2 4s linear 0s infinite alternate-reverse none;
+        object-position: 60px;
+    }
+
+    @keyframes shadow {
+        100% {
+            object-position: top;
+        }
+    }
+
+    @keyframes shadow1 {
+        100% {
+            transform: scale3d(1, 1, 1);
+        }
+    }
+
+    @keyframes shadow2 {
+        100% {
+            object-position: right;
+        }
+    }
+
+    @media (max-width:838px) {
+        & {
+            font-size: clamp(3.125rem, 2.351rem + 3.87vw, 4.375rem);
+        }
+    }
+
+    @media (max-width:627px) {
+        & {
+            font-size: clamp(3.125rem, -0.002rem + 15.64vw, 6.125rem);
+        }
+    }
+
+}

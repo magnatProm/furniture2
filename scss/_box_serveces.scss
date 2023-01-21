@@ -1,0 +1,44 @@
+.box_serveces {
+    color: #FFFFFF;
+
+    &__item {
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+        flex-basis: 434px;
+        padding: clamp(10.625rem, 9.081rem + 7.72vw, 15.625rem) 0px;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+        transition: .6s all;
+    }
+
+    &__item:hover {
+        background: #000000;
+    }
+
+    &__item:hover &__info {
+        transform: translateX(0px);
+        transition: transform .2s linear .4s;
+
+    }
+
+    &__img {
+        position: absolute;
+        @include height_width(100%, 100%);
+        z-index: -1;
+        top: 0;
+        object-fit: cover;
+    }
+
+    &__info {
+        overflow: auto;
+        top: 57%;
+        bottom: 22px;
+        transition: transform 0s linear 0s;
+        transform: translateX(-939px);
+        left: 0%;
+        right: 0%;
+        position: absolute;
+        border-top: 1px solid white;
+        border-radius: 0px;
+    }
+}
