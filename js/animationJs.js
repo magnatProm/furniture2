@@ -18,7 +18,7 @@ window.onload = () => {
       })
     }, options)
   
-    const arr = document.querySelectorAll('section , .container')
+    const arr = document.querySelectorAll('section , .container , .headline')
     arr.forEach(i => {
       observer.observe(i)
     })
