@@ -1,30 +1,9 @@
-// const promo__box = document.querySelectorAll('.promo__box');
-
-// function promoFunction(img_length, img) {
-//   let index = 0;
-
-//   setInterval(function () {
-
-//     if (index == img_length) index = 0;
-
-//     img.forEach(item => item.classList.remove('promo__img_active'))
-
-//     img[index].classList.add('promo__img_active');
-
-//     index++;
-//   }, 3000);
-// }
-
-// for(let i=0; i<promo__box.length; i++){
-//   promoFunction(promo__box[i].querySelectorAll('.promo__img').length, promo__box[i].querySelectorAll('.promo__img'));
-// }
-// promo__box
 const promo__box = document.querySelectorAll('.promo__box');
 
 function promoFunction(img_length) {
   let index = 0;
-  let img = img_length.querySelectorAll('.promo__img');
-  let img_number = img_length.querySelectorAll('.promo__img').length;
+  const img = img_length.querySelectorAll('.promo__img');
+  const img_number = img_length.querySelectorAll('.promo__img').length;
 
   setInterval(function () {
 
@@ -41,6 +20,7 @@ function promoFunction(img_length) {
 for(let i=0; i<promo__box.length; i++){
   promoFunction(promo__box[i]);
 }
+// promo__box
 
 
 
